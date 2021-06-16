@@ -56,7 +56,7 @@ Now, what's an example of a sigma algebra on the reals? For this, essentially ta
 
 For example, $$[0,1)$$ is a Borel set. Why? Notice that $$[0,1) = [(-\infty,0) \cup [1,\infty)]^c$$. Since $$(-\infty,0)$$ is open, it must be a Borel set (as the Borel sigma algebra contains the topology). Also, since $$(-\infty,1)$$ is open, it too is a Borel set; its complement $$[1,\infty)$$ is then a Borel set (by property 3 of sigma algebras). Then $$(-\infty,0) \cup [1,\infty)$$ is a Borel set as a countable union of Borel sets. Finally, its complement $$[0,1)$$ is a Borel set, as claimed.
 
-**Challenge exercise 1:** using a similar approach, prove that the set of irrational numbers is a Borel set. (*Hint:* at some point, you may want to consider a union of singleton sets $$\{x_0\}$$ for certain $$x_0 \in \mathbb{R}$$. Post your solutions in the [Maths @ Monash Discord](https://discord.gg/hx63ZwSXBg)!)
+**Challenge exercise 1:** using a similar approach, prove that the set of irrational numbers is a Borel set. (*Hint:* at some point, you may want to consider a union of singleton sets $$\{x_0\}$$ for certain $$x_0 \in \mathbb{R}$$.) Post your solutions in the [Maths @ Monash Discord](https://discord.gg/hx63ZwSXBg)!
 
 Almost any "reasonable" set you can think of will (almost surely, with probability 1!) be a Borel set (come up with your own examples and prove it), and these turn out to be precisely one broad class of sets $$A$$ for which it makes sense to talk about the probability of the event $$\{X \in A\}$$. Now it's time to tie this all back to probability. But to do so, we may as well (finally, for some of you) define probability rigorously...
 
@@ -88,7 +88,7 @@ this fully specifies the probability space in this experiment. (Note that in thi
 
 $$A_n = \{(\underbrace{0,0,...,0,1}_{n\ \text{tosses}},x_{n+1},x_{n+2},...) : x_{n+1},x_{n+2}... \in \{0,1\}\}$$.
 
-**Challenge question 2 (related to example 6).** If a random variable $$X$$ is defined on $$\mathbb{Z}^+$$ such that the event $$\{X = n\} = A_n$$ (i.e. $$\mathbb P(X = n) = \mathbb P(A_n)$$), what is the well-known distribution of $$X$$? Thus, what should $$\mathbb P$$ assign to this event $$A_n$$? What is the probability of any individual sequence $$(x_1,x_2,...)$$ of tosses? Is this a contradiction? (*Hint:* for the last part, consider countable additivity of $$\mathbb P$$. In particular, what is $$\lvert A_n \rvert$$? Can you show that it is *uncountable*? Consider Cantor's diagonalisation argument.)
+**Challenge question 2 (related to example 6).** If a random variable $$X$$ is defined on $$\mathbb{Z}^+$$ such that the event $$\{X = n\} = A_n$$ (i.e. $$\mathbb P(X = n) = \mathbb P(A_n)$$), what is the well-known distribution of $$X$$? Thus, what should $$\mathbb P$$ assign to this event $$A_n$$? What is the probability of any individual sequence $$(x_1,x_2,...)$$ of tosses? Is this a contradiction? (*Hint:* for the last part, consider countable additivity of $$\mathbb P$$. In particular, what is $$\lvert A_n \rvert$$? Can you show that it is *uncountable*? Consider Cantor's diagonalisation argument.) Post your solutions in the [Maths @ Monash Discord](https://discord.gg/hx63ZwSXBg)!
 
 To be continued...
 
