@@ -48,7 +48,7 @@ Now, what's an example of a sigma algebra on the reals? For this, essentially ta
 
 **Definition 3.** Let $$(\Omega,\tau)$$ be a topological space. The **Borel sigma algebra** $$\mathcal B = \mathcal B(\tau)$$ is the smallest sigma algebra containing $$\tau$$, in the sense that if $$\mathcal F$$ is a sigma algebra such that $$\tau \subseteq \mathcal F$$, then $$\mathcal B \subseteq \mathcal F$$. Elements of $$\mathcal B$$ are then called **Borel sets**.
 
-For example, $$[0,1)$$ is a Borel set. Why? Notice that $$[0,1) = [(-\infty,0) \cup [1,\infty)]^c$$. Since $$(-\infty,0)$$ is open, it must be a Borel set. Also, since $$(-\infty,1)$$ is open, it too is a Borel set; its complement $$[1,\infty)$$ is then a Borel set (by property 3 of sigma algebras). Then $$(-\infty,0) \cup [1,\infty)$$ is a Borel set as a countable union of Borel sets. Finally, its complement $$[0,1)$$ is a Borel set, as claimed.
+For example, $$[0,1)$$ is a Borel set. Why? Notice that $$[0,1) = [(-\infty,0) \cup [1,\infty)]^c$$. Since $$(-\infty,0)$$ is open, it must be a Borel set (as the Borel sigma algebra contains the topology). Also, since $$(-\infty,1)$$ is open, it too is a Borel set; its complement $$[1,\infty)$$ is then a Borel set (by property 3 of sigma algebras). Then $$(-\infty,0) \cup [1,\infty)$$ is a Borel set as a countable union of Borel sets. Finally, its complement $$[0,1)$$ is a Borel set, as claimed.
 
 **Challenge exercise 1:** using a similar approach, prove that the set of irrational numbers is a Borel set. (*Hint:* at some point, you may want to consider a union of singleton sets $$\{x_0\}$$ for certain $$x_0 \in \mathbb{R}$$. Post your solutions in the [Maths @ Monash Discord](https://discord.gg/hx63ZwSXBg)!)
 
