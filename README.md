@@ -1,3 +1,5 @@
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
 # Why probability and statistics needs measure theory
 
 ## Introduction
@@ -6,5 +8,3 @@ You may have encountered continuous probability distributions such as the normal
 $$f_\theta : \R \to \R, \quad x \mapsto \frac{1}{\sqrt{2\pi\sigma^2}}\exp\left(-\frac{(x - \mu)^2}{2\sigma^2}\right)$$
 
 [Yes!](20210616.md)
-
-<a href="./20210616">Go to next page</a>
