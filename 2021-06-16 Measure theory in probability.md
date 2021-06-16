@@ -50,7 +50,7 @@ Now, what's an example of a sigma algebra on the reals? For this, essentially ta
 
 For example, $$[0,1)$$ is a Borel set. Why? Notice that $$[0,1) = [(-\infty,0) \cup [1,\infty)]^c$$. Since $$(-\infty,0)$$ is open, it must be a Borel set. Also, since $$(-\infty,1)$$ is open, it too is a Borel set; its complement $$[1,\infty)$$ is then a Borel set (by property 3 of sigma algebras). Then $$(-\infty,0) \cup [1,\infty)$$ is a Borel set as a countable union of Borel sets. Finally, its complement $$[0,1)$$ is a Borel set, as claimed.
 
-**Challenge exercise 1:** using a similar approach, prove that the set of irrational numbers is a Borel set. (*Hint:* you may want to show that every singleton set $$\{x_0\}$$ for $$x_0 \in \mathbb{R}$$ is closed. Post your solutions in the [Maths @ Monash Discord](https://discord.gg/hx63ZwSXBg)!)
+**Challenge exercise 1:** using a similar approach, prove that the set of irrational numbers is a Borel set. (*Hint:* at some point, you may want to consider a union of singleton sets $$\{x_0\}$$ for certain $$x_0 \in \mathbb{R}$$. Post your solutions in the [Maths @ Monash Discord](https://discord.gg/hx63ZwSXBg)!)
 
 ### Measure and probability spaces
 
