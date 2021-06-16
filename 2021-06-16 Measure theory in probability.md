@@ -34,10 +34,10 @@ Yes, this is the *topology* in which donuts are the same as (homeomorphic to) co
 
 Now back to our question: which sets can we talk about probabilities of? Suppose that we only allowed open and closed sets. Then sets as simple as $$[0,1)$$ would be disallowed, but it seems quite reasonable to talk about the probability of $$\{0 \leq X < 1\}$$! Thus we introduce sigma algebras:
 
-**Definition 2.** Let $$\Omega$$ be a set, called the **sample space** in our context. A **sigma algebra** on $$\Omega$$ is a collection $$\mathcal F$$ of subsets of $$\Omega$$ satisfying the following properties:
+**Definition 2.** Let $$\Omega$$ be a set, called the **sample space** in our context. A **sigma algebra (of sets)** on $$\Omega$$ is a collection $$\mathcal F$$ of subsets of $$\Omega$$ satisfying the following properties:
 
 1. **(Whole and empty set)** The whole and empty sets are elements of the sigma algebra: $$\Omega \in \mathcal F$$ and $$\varnothing \in \mathcal F$$ (we may omit one of these);
 2. **(Closure under countable unions)** For an countable collection of sets $$(A_i)_{i = 1}^\infty$$ with each $$A_i \in \mathcal F$$, their union $$\bigcup_{i = 1}^\infty A_i \in \tau$$ also;
 3. **(Closure under complements)** If $$A \in \mathcal F$$, then $$A^c := \Omega \setminus A \in \mathcal F$$.
 
-If $$\mathcal F$$ is a topology on $$\Omega$$, then the pair $$(\Omega,\mathcal F)$$ is a **measurable space**, and the elements in the sigma algebra (subsets of $$\Omega$$) are called **measurable sets**.
+If $$\mathcal F$$ is a sigma algebra on $$\Omega$$, then the pair $$(\Omega,\mathcal F)$$ is a **measurable space**, and the elements in the sigma algebra (subsets of $$\Omega$$) are called **measurable sets**; in the context of probability, we call them **events**.
