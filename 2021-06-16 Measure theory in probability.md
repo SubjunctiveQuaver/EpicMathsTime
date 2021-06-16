@@ -84,7 +84,9 @@ $$\mathbb P(A) = \mathbb P\left(\bigcup_{\omega \in A} \{\omega\}\right) = \sum_
 
 this fully specifies the probability space in this experiment. (Note that in this derivation, we assumed that $$\mathbb P$$ was a probability measure, to get countable additivity.)
 
-**Example 6 (independently tossing a sequence of coins).** Here, a possible sample space is $$\{0,1\}^\infty$$, the space of infinite sequences with terms in $$\{0,1\}$$, where we may associate $$0$$ with a tails, and $$1$$ with a heads. Again, we may take the event space $$\mathcal F$$ to be the power set, so any set of sequences is a valid event. Suppose that for each toss, a head appears with probability $$p \in [0,1]$$. For integer $$n \geq 1$$, let $$A_n$$ be the event that the first head is tossed on the $$n$$th toss: then $$A_n = \{(\underbrace{0,0,...,0,1}_{n\ \text{tosses}},x_{n+1},x_{n+2},...) : x_{n+1},x_{n+2}... \in \{0,1\}\}$$.
+**Example 6 (independently tossing a sequence of coins).** Here, a possible sample space is $$\{0,1\}^\infty$$, the space of infinite sequences with terms in $$\{0,1\}$$, where we may associate $$0$$ with a tails, and $$1$$ with a heads. Again, we may take the event space $$\mathcal F$$ to be the power set, so any set of sequences is a valid event. Suppose that for each toss, a head appears with probability $$p \in [0,1]$$. For integer $$n \geq 1$$, let $$A_n$$ be the event that the first head is tossed on the $$n$$th toss: then
+
+$$A_n = \{(\underbrace{0,0,...,0,1}_{n\ \text{tosses}},x_{n+1},x_{n+2},...) : x_{n+1},x_{n+2}... \in \{0,1\}\}$$.
 
 **Challenge question 2 (related to example 6).** If a random variable $$X$$ is defined on $$\Z^+$$ such that the event $$\{X = n\} = A_n$$ (i.e. $$\mathbb P(X = n) = \mathbb P(A_n)$$), what is the well-known distribution of $$X$$? Thus, what should $$\mathbb P$$ assign to this event $$A_n$$? What is the probability of any individual sequence $$(x_1,x_2,...)$$ of tosses? Is this a contradiction? (*Hint:* for the last part, consider countable additivity of $$\mathbb P$$. In particular, what is $$\abs{A_n}$$? Can you show that it is *uncountable*? Consider Cantor's diagonalisation argument.)
 
