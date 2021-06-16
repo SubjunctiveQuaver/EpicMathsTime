@@ -42,7 +42,7 @@ Now back to our question: which sets can we talk about probabilities of? Suppose
 
 If $$\mathcal F$$ is a sigma algebra on $$\Omega$$, then the pair $$(\Omega,\mathcal F)$$ is a **measurable space**, and the elements in the sigma algebra (subsets of $$\Omega$$) are called **measurable sets**; in the context of probability, we call them **events**.
 
-Note that by de Morgan's laws, we also have closure under countable intersections: if $$A_1,A_2,... \in \mathcal F$$, then $$A_1^c,A_2^c,... \in \mathcal F$$; then $$\bigcup_{i = 1}^\infty A_i^c = \left(\bigcap_{i = 1}^\infty A_i)^c \in \mathcal F$$, so its complement $$\bigcap_{i = 1}^\infty A_i \in \mathcal F$$.
+Note that by de Morgan's laws, we also have closure under countable intersections: if $$A_1,A_2,... \in \mathcal F$$, then $$A_1^c,A_2^c,... \in \mathcal F$$; then $$\bigcup_{i = 1}^\infty A_i^c = \left(\bigcap_{i = 1}^\infty A_i\right)^c \in \mathcal F$$, so its complement $$\bigcap_{i = 1}^\infty A_i \in \mathcal F$$.
 
 Now, what's an example of a sigma algebra on the reals? For this, essentially take our standard topology from above, and just force it to be a sigma algebra: this gives the *Borel sigmal algebra*.
 
