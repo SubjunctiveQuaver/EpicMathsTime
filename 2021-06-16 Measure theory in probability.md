@@ -88,7 +88,7 @@ this fully specifies the probability space in this experiment. (Note that in thi
 
 $$A_n = \{(\underbrace{0,0,...,0,1}_{n\ \text{tosses}},x_{n+1},x_{n+2},...) : x_{n+1},x_{n+2}... \in \{0,1\}\}$$.
 
-**Challenge question 2 (related to example 6).** If a random variable $$X$$ is defined on $$\Z^+$$ such that the event $$\{X = n\} = A_n$$ (i.e. $$\mathbb P(X = n) = \mathbb P(A_n)$$), what is the well-known distribution of $$X$$? Thus, what should $$\mathbb P$$ assign to this event $$A_n$$? What is the probability of any individual sequence $$(x_1,x_2,...)$$ of tosses? Is this a contradiction? (*Hint:* for the last part, consider countable additivity of $$\mathbb P$$. In particular, what is $$\lvert A_n \rvert$$? Can you show that it is *uncountable*? Consider Cantor's diagonalisation argument.)
+**Challenge question 2 (related to example 6).** If a random variable $$X$$ is defined on $$\mathbb{Z}^+$$ such that the event $$\{X = n\} = A_n$$ (i.e. $$\mathbb P(X = n) = \mathbb P(A_n)$$), what is the well-known distribution of $$X$$? Thus, what should $$\mathbb P$$ assign to this event $$A_n$$? What is the probability of any individual sequence $$(x_1,x_2,...)$$ of tosses? Is this a contradiction? (*Hint:* for the last part, consider countable additivity of $$\mathbb P$$. In particular, what is $$\lvert A_n \rvert$$? Can you show that it is *uncountable*? Consider Cantor's diagonalisation argument.)
 
 To be continued...
 
