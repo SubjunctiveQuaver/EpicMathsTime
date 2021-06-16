@@ -80,9 +80,11 @@ But now we turn our attention back to probability spaces. Note that the probabil
 
 Now we consider the probability measure $$\mathbb P : \mathcal F \to [0,1]$$. Note that every event $$A$$ is a (countable) union of individual outcomes $$\omega \in \Omega$$. By our assumption of fairness and independence (which gives symmetry), each of the 36 possible outcomes is assigned a measure of $$\frac{1}{36}$$, so that $$\mathbb P(\Omega) = 1$$. Thus, for $$A \in \mathcal F$$, its probability depends only on its cardinality: in fact,
 
-$$\mathbb P(A) = \mathbb P\left(\bigcup_{\omega \in A} \{\omega\}\right) = \sum_{\omega \in A} \mathbb P(\{omega\}) = \sum_{\omega \in A} \frac{1}{36} = \frac{|A|}{36};$$
+$$\mathbb P(A) = \mathbb P\left(\bigcup_{\omega \in A} \{\omega\}\right) = \sum_{\omega \in A} \mathbb P(\{\omega\}) = \sum_{\omega \in A} \frac{1}{36} = \frac{|A|}{36};$$
 
-this fully specifies the probability space in this experiment.
+this fully specifies the probability space in this experiment. (Note that in this derivation, we assumed that $$\mathbb P$$ was a probability measure, to get countable additivity.)
+
+**Example 6 (independently flipping a sequence of coins).** Here, a possible sample space is $$\{0,1\}^\infty$$, the space of infinite sequences with terms in $$\{0,1\}$$, where we may associate $$0$$ with a tails, and $$1$$ with a heads.
 
 To be continued...
 
