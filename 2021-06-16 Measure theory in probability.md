@@ -58,7 +58,7 @@ For example, $$[0,1)$$ is a Borel set. Why? Notice that $$[0,1) = [(-\infty,0) \
 
 **Challenge exercise 1:** using a similar approach, prove that the set of irrational numbers is a Borel set. (*Hint:* at some point, you may want to consider a union of singleton sets $$\{x_0\}$$ for certain $$x_0 \in \mathbb{R}$$. Post your solutions in the [Maths @ Monash Discord](https://discord.gg/hx63ZwSXBg)!)
 
-Almost any "reasonable" set you can think of will be a Borel set, and these turn out to be precisely one broad class of sets $$A$$ for which it makes sense to talk about the probability of the event $$\{X \in A\}$$. Now it's time to tie this all back to probability. But to do so, we may as well (finally, for some of you) define probability rigorously...
+Almost any "reasonable" set you can think of will (almost surely, with probability 1!) be a Borel set (come up with your own examples and prove it), and these turn out to be precisely one broad class of sets $$A$$ for which it makes sense to talk about the probability of the event $$\{X \in A\}$$. Now it's time to tie this all back to probability. But to do so, we may as well (finally, for some of you) define probability rigorously...
 
 ### Measure and probability spaces
 
