@@ -62,4 +62,30 @@ Almost any "reasonable" set you can think of will (almost surely, with probabili
 
 ### Measure and probability spaces
 
+We define a way to assign "sizes" to measurable sets. This is the essence of measure theory.
+
+**Definition 4.** A **measure** on a measurable space $$(\Omega,\mathcal F)$$ is a function $$\mu : \mathcal F \to [0,\infty]$$ (yes, we include infinity), satisfying:
+
+1. **(Null empty set)** $$\mu(\varnothing) = 0$$;
+2. **(Countable additivity)** If $$(A_i)_{i = 1}^\infty$$ is a countable sequence of disjoint sets (i.e. $$A_i \cap A_j = \varnothing$$ for $$i \neq j$$), then
+   $$\mu\left(\bigcup_{i = 1}^\infty A_i\right) = \sum_{i = 1}^\infty \mu(A_i)$$.
+
+Then $$(\Omega,\mathcal F,\mu)$$ is a **measure space**. If we add the additional property that $$\mu(\Omega) = 1$$, then $$\mu$$ is a **probability measure**, and $$(\Omega,\mathcal F,\mu)$$ is a **probability space**. (In this case, we usually write $$\mathbb P$$ instead of $$\mu$$, so that $$(\Omega,\mathcal F,\mathbb P)$$ is a probability space; here, $$\mathcal F$$ is the **event space**.)
+
+For example, the *Lebesgue measure* $$\lambda$$ on $$\mathbb{R}$$ is a way to assign lengths to subsets of the reals in a sensible way: $$\lambda((0,1)) = \lambda([0,1]) = 1$$, $$\lambda(\{1,2,3,4,5\}) = \lambda(\mathbb{N}) = \lambda(\mathbb{Q}) = 0$$, etc.
+
+But now we turn our attention back to probability spaces. Note that the probability measure $$\mathbb P$$ is extremely abstract: once we have decided on a *sample space*, that is, a set of possible outcomes, *any* function $$\mathbb{P} : \mathcal F \to [0,1]$$ satisfying the above two properties of a measure, defines a "probability" on $$\Omega$$. This probability may range from something usual, to something wild. We consider a few simple examples:
+
+**Example 5 (rolling two independent fair dice).** Here, a possible sample space is $$\Omega = \{1,...,6\} \times \{1,...,6\}$$, i.e. ordered pairs of numbers in $$1,...,6$$. This naturally encodes the outcome of a sequence of two dice rolls. Now what are the valid events? Since the sample space has $$36$$ elements (and is finite), we may take $$\mathcal F = \mathcal P(\Omega)$$, the power set of the sample space; that is, every subset of $$\Omega$$ is a valid event. (You can check that this is indeed a sigma algebra on $$\Omega$$).
+
+Now we consider the probability measure $$\mathbb P : \mathcal F \to [0,1]$$. Note that every event $$A$$ is a (countable) union of individual outcomes $$\omega \in \Omega$$. By our assumption of fairness and independence (which gives symmetry), each of the 36 possible outcomes is assigned a measure of $$\frac{1}{36}$$, so that $$\mathbb P(\Omega) = 1$$. Thus, for $$A \in \mathcal F$$, its probability depends only on its cardinality: in fact,
+
+$$\mathbb P(A) = \mathbb P\left(\bigcup_{\omega \in A} \{\omega\}\right) = \sum_{\omega \in A} \mathbb P(\{omega\}) = \sum_{\omega \in A} \frac{1}{36} = \frac{|A|}{36};$$
+
+this fully specifies the probability space in this experiment.
+
+To be continued...
+
+### What is a random variable?
+
 To be continued...
