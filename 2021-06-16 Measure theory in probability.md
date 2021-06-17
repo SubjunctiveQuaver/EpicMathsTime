@@ -132,7 +132,7 @@ this forces $$\mathbb P(\{1\}) = 0$$, otherwise we get a contradiction with $$\m
 
 $$\mathbb P(A^c) = \mathbb P\left(\left(0,\frac{1}{2}\right) \cup \left(\frac{1}{2},1\right) \cup \{1\}\right) = \mathbb P\left(\left(0,\frac{1}{2}\right)\right) + \mathbb P\left(\left(\frac{1}{2},1\right)\right) + \mathbb P(\{1\}) = \frac{1}{2} + \frac{1}{2} + 0 = 1,$$
 
-meaning that $$\mathbb P(A) = 0$$.
+meaning that $$\mathbb P(A) = 0$$. Again, this is an event that is possible (we *can* pick $$0$$ or $$1/2$$ randomly, but the *probability* is $$0$$.)
 
 To be continued...
 
