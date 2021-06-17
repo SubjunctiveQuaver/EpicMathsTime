@@ -110,13 +110,13 @@ this fully specifies the probability space in this experiment. (Note that in thi
 
 **Example 8 (independently tossing a sequence of coins).** Here, a possible sample space is $$\{0,1\}^\infty$$, the space of infinite sequences with terms in $$\{0,1\}$$, where we may associate $$0$$ with a tails, and $$1$$ with a heads. In this case, an appropriate [event space](https://math.stackexchange.com/questions/1457569/question-about-the-sigma-algebra-for-infinite-coin-toss) $$\mathcal F$$ is more complicated. For a finite binary string $$b = b_1\dotsb b_n$$, define
 
-$$A_b = \{(b_1,b_2,...,b_n,x_{n+1},x_{n+2},...) : x_{n+1},x_{n+2}... \in \{0,1\}\}.$$
+$$A_b = \{(b_1,b_2,...,b_n,x_{n+1},x_{n+2},...) : x_{n+1},x_{n+2},... \in \{0,1\}\}.$$
 
 Then for natural $$n \geq 0$$, define $$\mathcal F_n := \{\varnothing,\Omega\} \cup \{A_b : b\ \text{is a binary string of length at most}\ n\}$$. For example, $$\mathcal F_2 := \{\varnothing,\Omega,A_0,A_1,A_{00},A_{01},A_{10},A_{11}\}$$. Define $$\mathcal F$$ as the smallest sigma algebra containing $$\bigcup_{n = 0}^\infty \mathcal F_n$$ (the union turns out to not be a sigma algebra, as seen [here](https://math.stackexchange.com/questions/1457569/question-about-the-sigma-algebra-for-infinite-coin-toss)). We need this construction, instead of the entire power set of $$\Omega$$, as there turn out to be subsets of $$\Omega$$ that [cannot be assigned a measure](https://math.stackexchange.com/a/1457657/) in a way that agrees with our definition!
 
 Now suppose that for each toss, a head appears with probability $$p \in [0,1]$$. For integer $$n \geq 1$$, let $$B_n$$ be the event that the first head is tossed on the $$n$$th toss: then
 
-$$B_n = \{(\underbrace{0,0,...,0,1}_{n\ \text{tosses}},x_{n+1},x_{n+2},...) : x_{n+1},x_{n+2}... \in \{0,1\}\}.$$
+$$B_n = \{(\underbrace{0,0,...,0,1}_{n\ \text{tosses}},x_{n+1},x_{n+2},...) : x_{n+1},x_{n+2},... \in \{0,1\}\}.$$
 
 **Challenge question 3 (related to example 8).** If a random variable $$X$$ is defined on $$\mathbb{Z}^+$$ such that the event $$\{X = n\} = B_n$$ (i.e. $$\mathbb P(X = n) = \mathbb P(B_n)$$), what is the well-known distribution of $$X$$? Thus, what should $$\mathbb P$$ assign to this event $$B_n$$? What is the probability of any individual sequence $$\omega = (x_1,x_2,...)$$ of tosses in $$B_n$$? Is $$\mathbb P(B_n) = \mathbb P\left(\bigcup_{\omega \in B_n} \{\omega\}\right) = \sum_{\omega \in B_n} \mathbb P(\{\omega\})$$? Is this a contradiction? (*Hint:* for the last part, consider *countable* additivity of $$\mathbb P$$. In particular, what is $$\lvert B_n \rvert$$? Can you show that it is *uncountable*? Consider Cantor's diagonalisation argument.) Post your solutions in the unofficial [Maths @ Monash Discord](https://discord.gg/hx63ZwSXBg)!
 
@@ -124,18 +124,20 @@ In this previous example, we saw an example of an event with probability 0, but 
 
 **Example 9 (uniform distribution on unit interval).** In this example, $$\Omega = [0,1]$$. Imagine randomly selecting a number in $$[0,1]$$; random number generators do this (pseudorandomly) all the time. What is the probability of getting a particular number $$\omega \in [0,1]$$? (We'll answer this later.) Let's firstly consider the event space. It turns out the power set of $$[0,1]$$ is too big; this is where we use the *Borel sigma algebra*! Recall the Borel sets in $$\R$$. We say that $$A \subseteq [0,1]$$ is a Borel set (in $$[0,1]$$) if it is a Borel set in $$\R$$, under the usual topology (open sets contain open intervals about every point). So $$\mathcal F = \mathcal B$$; for example, $$[0,1],(0,1),(1/2,3/4),\mathbb Q \cap [0,1]$$ are all valid events.
 
-We define $$\mathbb P : \mathcal F \to [0,1]$$ in a natural way: for any open interval $$I = (a,b) \in [0,1]$$, we define $$\mathbb P(I) = b - a$$. This then extends to all the other Borel sets via the properties of a probability measure. For example, the probability of $$A = \{0,1/2\}$$ is $$0$$: $$A^c = (0,1/2) \cup (1/2,1) \cup \{1\}$$. We defined $$\mathbb P((0,1/2)) = \mathbb P((1/2,1)) = 1/2$$. Note that $$\mathbb P((0,1)) = 1 - 0 = 1$$ and $$(0,1] = (0,1) \cup \{1\}$$ is a decomposition into disjoint events, so
+We define $$\mathbb P : \mathcal F \to [0,1]$$ in a natural way: for any open interval $$I = (a,b) \subseteq [0,1]$$, we define $$\mathbb P(I) = b - a$$. Moreover, define $$\mathbb P([0,a)) = a$$ and $$\mathbb P((a,1]) = 1 - a$$ for $$a \in [0,1]$$. This then extends to all the other Borel sets via the properties of a probability measure (invoking the [Hahn-Kolmogorov theorem](https://handwiki.org/wiki/Hahn%E2%80%93Kolmogorov_theorem)). For example, the probability of $$A = \{0,1/2\}$$ is $$0$$: $$A^c = (0,1/2) \cup (1/2,1]$$. We defined $$\mathbb P((0,1/2)) = \mathbb P((1/2,1]) = 1/2$$. Therefore,
 
-$$\mathbb P((0,1]) = \mathbb P((0,1)) + \mathbb P(\{1\}) = 1 + \mathbb P(\{1\});$$
-
-this forces $$\mathbb P(\{1\}) = 0$$, otherwise we get a contradiction with $$\mathbb P((0,1]) \leq 1$$. Therefore,
-
-$$\mathbb P(A^c) = \mathbb P\left(\left(0,\frac{1}{2}\right) \cup \left(\frac{1}{2},1\right) \cup \{1\}\right) = \mathbb P\left(\left(0,\frac{1}{2}\right)\right) + \mathbb P\left(\left(\frac{1}{2},1\right)\right) + \mathbb P(\{1\}) = \frac{1}{2} + \frac{1}{2} + 0 = 1,$$
+$$\mathbb P(A^c) = \mathbb P\left(\left(0,\frac{1}{2}\right) \cup \left(\frac{1}{2},1\right]\right) = \mathbb P\left(\left(0,\frac{1}{2}\right)\right) + \mathbb P\left(\left(\frac{1}{2},1\right)\right) = \frac{1}{2} + \frac{1}{2} = 1,$$
 
 meaning that $$\mathbb P(A) = 0$$. Again, this is an event that is possible (we *can* pick $$0$$ or $$1/2$$ randomly, but the *probability* is $$0$$.)
+
+As another example, we compute $$\mathbb P(\mathbb A \cap \Omega)$$, where $$\mathbb A \subseteq \mathbb C$$ is the set of algebraic numbers, i.e. solutions to polynomials with *integer* coefficients. By the fundamental theorem of calculus, a degree $$n$$ polynomial has at most $$n$$ solutions. By identifying the degree-$$n$$ polynomial $$p(x) = a_0 + a_1x + \dotsb + a_nx^n$$ with the sequence $$(a_0,a_1,...,a_n) \in \mathbb Z^n$$ and taking a union over all $$n \in \mathbb N$$, it is possible to see that the set of polynomials $$\mathbb Z[x]$$ with integral coefficients is [countable](https://math.stackexchange.com/questions/341349/prove-that-the-set-of-integer-coefficients-polynomials-is-countable). Thus there are at most a countable number of algebraic numbers (by counting the roots as you count these polynomials). As shown in the following challenge question, $$\mathbb P(\{x\}) = 0$$ for any $$x \in [0,1]$$. Since $$\mathbb A \cap \Omega$$ is a countable union of such singleton sets, it follows by countable additivity that $$\mathbb P(\mathbb A \cap \Omega) = 0$$.
+
+**Challenge question 4 (related to example 9).** Show, using only the properties of a probability measure, that for any $$x \in [0,1]$$, $$\mathbb P(\{x\}) = 0$$. Thus show that $$\mathbb P([a,b]) = b - a$$ for *closed intervals* $$[a,b] \subseteq [0,1]$$ with $$a \neq 0$$ and $$b \neq 1$$ (although it is true for those too). What is $$\mathbb P(\Omega \setminus \mathbb Q)$$?
 
 To be continued...
 
 ### What is a random variable?
+
+Measurable functions
 
 To be continued...
