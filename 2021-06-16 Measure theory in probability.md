@@ -126,7 +126,7 @@ In this previous example, we saw an example of an event with probability 0, but 
 
 We define $$\mathbb P : \mathcal F \to [0,1]$$ in a natural way: for any open interval $$I = (a,b) \subseteq [0,1]$$, we define $$\mathbb P(I) = b - a$$. Moreover, define $$\mathbb P([0,a)) = a$$ and $$\mathbb P((a,1]) = 1 - a$$ for $$a \in (0,1)$$. This then extends to all the other Borel sets via the properties of a probability measure (invoking the [Hahn-Kolmogorov theorem](https://handwiki.org/wiki/Hahn%E2%80%93Kolmogorov_theorem)). For example, the probability of $$A = \{0,1/2\}$$ is $$0$$: $$A^c = (0,1/2) \cup (1/2,1]$$. We defined $$\mathbb P((0,1/2)) = \mathbb P((1/2,1]) = 1/2$$. Therefore,
 
-$$\mathbb P(A^c) = \mathbb P\left(\left(0,\frac{1}{2}\right) \cup \left(\frac{1}{2},1\right]\right) = \mathbb P\left(\left(0,\frac{1}{2}\right)\right) + \mathbb P\left(\left(\frac{1}{2},1\right)\right) = \frac{1}{2} + \frac{1}{2} = 1,$$
+$$\mathbb P(A^c) = \mathbb P\left(\left(0,\frac{1}{2}\right) \cup \left(\frac{1}{2},1\right]\right) = \mathbb P\left(\left(0,\frac{1}{2}\right)\right) + \mathbb P\left(\left(\frac{1}{2},1\right]\right) = \frac{1}{2} + \frac{1}{2} = 1,$$
 
 meaning that $$\mathbb P(A) = 0$$. Again, this is an event that is possible (we *can* pick $$0$$ or $$1/2$$ randomly, but the *probability* is $$0$$.)
 
