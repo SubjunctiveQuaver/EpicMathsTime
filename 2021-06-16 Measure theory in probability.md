@@ -20,7 +20,7 @@ In fact, we are kind of working backwards. The probability density function is e
 
 ## Measure theory, with a probabilistic flavour
 
-### Topologies and sigma algebras
+### Topologies and sigma algebras (optional, but highly recommended)
 
 Measure theory is essentially the theory of assigning sizes to sets, done rigorously. We will motivate probability spaces, which are measure spaces in which the "total size" is 1. But first, we define a *topology*; it turns out that it is intimately related to measures.
 
@@ -96,6 +96,8 @@ so $$\mathbb P(A^c) = 1 - \mathbb P(A)$$, as claimed. $$\square$$
 
 **Challenge question 2.** Prove that for *any* $$A,B \in \mathcal F$$ (not necessarily disjoint), we have $$\mathbb P(A \cup B) = \mathbb P(A) + \mathbb P(B) - \mathbb P(A \cap B)$$. (*Hint:* decompose $$A \cup B$$ into two disjoint events in $$\mathcal F$$.)
 
+### Examples of probability spaces
+
 Note that the probability measure $$\mathbb P$$ is extremely abstract: once we have decided on a *sample space*, that is, a set of possible outcomes, *any* function $$\mathbb{P} : \mathcal F \to [0,1]$$ satisfying the above properties of a measure, defines a "probability" on $$\Omega$$. This probability may range from something usual, to something wild. We consider a few simple examples:
 
 **Example 7 (rolling two independent fair dice).** Here, a possible sample space is $$\Omega = \{1,...,6\} \times \{1,...,6\}$$, i.e. ordered pairs of numbers in $$1,...,6$$. This naturally encodes the outcome of a sequence of two dice rolls. Now what are the valid events? Since the sample space has $$36$$ elements (and is finite), we may take $$\mathcal F = \mathcal P(\Omega)$$, the power set of the sample space; that is, every subset of $$\Omega$$ is a valid event. (You can check that this is indeed a sigma algebra on $$\Omega$$. How many events are there in total?)
@@ -120,7 +122,17 @@ $$B_n = \{(\underbrace{0,0,...,0,1}_{n\ \text{tosses}},x_{n+1},x_{n+2},...) : x_
 
 In this previous example, we saw an example of an event with probability 0, but is certainly possible: of course, the event of any particular sequence of heads/tails is a possible outcome.
 
-**Example 9 (uniform distribution on unit interval).**
+**Example 9 (uniform distribution on unit interval).** In this example, $$\Omega = [0,1]$$. Imagine randomly selecting a number in $$[0,1]$$; random number generators do this (pseudorandomly) all the time. What is the probability of getting a particular number $$\omega \in [0,1]$$? (We'll answer this later.) Let's firstly consider the event space. It turns out the power set of $$[0,1]$$ is too big; this is where we use the *Borel sigma algebra*! Recall the Borel sets in $$\R$$. We say that $$A \subseteq [0,1]$$ is a Borel set (in $$[0,1]$$) if it is a Borel set in $$\R$$, under the usual topology (open sets contain open intervals about every point). So $$\mathcal F = \mathcal B$$; for example, $$[0,1],(0,1),(1/2,3/4),\mathbb Q \cap [0,1]$$ are all valid events.
+
+We define $$\mathbb P : \mathcal F \to [0,1]$$ in a natural way: for any open interval $$I = (a,b) \in [0,1]$$, we define $$\mathbb P(I) = b - a$$. This then extends to all the other Borel sets via the properties of a probability measure. For example, the probability of $$A = \{0,1/2\}$$ is $$0$$: $$A^c = (0,1/2) \cup (1/2,1) \cup \{1\}$$. We defined $$\mathbb P((0,1/2)) = \mathbb P((1/2,1)) = 1/2$$. Note that $$\mathbb P((0,1)) = 1 - 0 = 1$$ and $$(0,1] = (0,1) \cup \{1\}$$ is a decomposition into disjoint events, so
+
+$$\mathbb P((0,1]) = \mathbb P((0,1)) + \mathbb P(\{1\}) = 1 + \mathbb P(\{1\});$$
+
+this forces $$\mathbb P(\{1\}) = 0$$, otherwise we get a contradiction with $$\mathbb P((0,1]) \leq 1$$. Therefore,
+
+$$\mathbb P(A^c) = \mathbb P\left(\left(0,\frac{1}{2}\right) \cup \left(\frac{1}{2},1\right) \cup \{1\}\right) = \mathbb P\left(\left(0,\frac{1}{2}\right)\right) + \mathbb P\left(\left(\frac{1}{2},1\right)\right) + \mathbb P(\{1\}) = \frac{1}{2} + \frac{1}{2} + 0 = 1,$$
+
+meaning that $$\mathbb P(A) = 0$$.
 
 To be continued...
 
