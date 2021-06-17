@@ -43,7 +43,7 @@ Now back to our question: which sets can we talk about probabilities of? Suppose
 **Definition 2.** Let $$\Omega$$ be a set, called the **sample space** in our context. A **sigma algebra (of sets)** on $$\Omega$$ is a collection $$\mathcal F$$ of subsets of $$\Omega$$ satisfying the following properties:
 
 1. **(Whole and empty set)** The whole and empty sets are elements of the sigma algebra: $$\Omega \in \mathcal F$$ and $$\varnothing \in \mathcal F$$ (we may omit one of these);
-2. **(Closure under countable unions)** For an countable collection of sets $$(A_i)_{i = 1}^\infty$$ with each $$A_i \in \mathcal F$$, their union $$\bigcup_{i = 1}^\infty A_i \in \tau$$ also;
+2. **(Closure under countable unions)** For an countable collection of sets $$(A_i)_{i = 1}^\infty$$ with each $$A_i \in \mathcal F$$, their union $$\bigcup_{i = 1}^\infty A_i \in \mathcal F$$ also;
 3. **(Closure under complements)** If $$A \in \mathcal F$$, then its **complement** $$A^c := \Omega \setminus A \in \mathcal F$$.
 
 If $$\mathcal F$$ is a sigma algebra on $$\Omega$$, then the pair $$(\Omega,\mathcal F)$$ is a **measurable space**, and the elements in the sigma algebra (subsets of $$\Omega$$) are called **measurable sets**; in the context of probability, we call them **events**.
@@ -132,12 +132,18 @@ meaning that $$\mathbb P(A) = 0$$. Again, this is an event that is possible (we 
 
 As another example, we compute $$\mathbb P(\mathbb A \cap \Omega)$$, where $$\mathbb A \subseteq \mathbb C$$ is the set of algebraic numbers, i.e. solutions to polynomials with *integer* coefficients. By the fundamental theorem of calculus, a degree $$n$$ polynomial has at most $$n$$ solutions. By identifying the degree-$$n$$ polynomial $$p(x) = a_0 + a_1x + \dotsb + a_nx^n \in \mathbb Z[x]$$ with the sequence $$(a_0,a_1,...,a_n) \in \mathbb Z^n$$ and taking a union over all $$n \in \mathbb N$$, it is possible to see that the set of polynomials $$\mathbb Z[x]$$ with integral coefficients is [countable](https://math.stackexchange.com/questions/341349/prove-that-the-set-of-integer-coefficients-polynomials-is-countable). Thus there are at most a countable number of algebraic numbers (by counting the roots as you count these polynomials). As shown in the following challenge question, $$\mathbb P(\{x\}) = 0$$ for any $$x \in [0,1]$$. Since $$\mathbb A \cap \Omega$$ is a countable union of such singleton sets, it follows by countable additivity that $$\mathbb P(\mathbb A \cap \Omega) = 0$$.
 
-**Challenge question 4 (related to example 9).** Show, using only the properties of a probability measure, that for any $$x \in [0,1]$$, $$\mathbb P(\{x\}) = 0$$. Thus show that $$\mathbb P([a,b]) = b - a$$ for *closed intervals* $$[a,b] \subseteq [0,1]$$ with $$a \neq 0$$ and $$b \neq 1$$ (although it is true for those too). What is $$\mathbb P(\Omega \setminus \mathbb Q)$$?
+**Challenge question 4 (related to example 9).** Show, using only the properties of a probability measure, that for any $$x \in [0,1]$$, $$\mathbb P(\{x\}) = 0$$. Thus show that $$\mathbb P([a,b]) = b - a$$ for *closed intervals* $$[a,b] \subseteq [0,1]$$ with $$a \neq 0$$ and $$b \neq 1$$ (although it is true for those too). What is the probability that a randomly chosen number is irrational, i.e. $$\mathbb P(\Omega \setminus \mathbb Q)$$?
 
-To be continued...
+We've now had quite a bit of experience with probability spaces, and maybe you can start to appreciate the role of measure theory in probability! Now we are finally ready, and will attempt to answer the age-old question: what is a random variable?
 
 ### What is a random variable?
 
-Measurable functions
+Let $$(\Omega,\mathcal F,\mathbb P)$$ be a probability space.
+
+**Definition 10.** A **random variable** is a *measurable* function $$X : \Omega \to E$$, where $$(E,\mathcal E)$$ is the **state space**. We usually take 
+
+To be continued...
+
+### Expected value: a Lebesgue integral?
 
 To be continued...
