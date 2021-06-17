@@ -86,11 +86,17 @@ $$\mathbb P(A) = \mathbb P\left(\bigcup_{\omega \in A} \{\omega\}\right) = \sum_
 
 this fully specifies the probability space in this experiment. (Note that in this derivation, we assumed that $$\mathbb P$$ was a probability measure, to get countable additivity.)
 
-**Example 6 (independently tossing a sequence of coins).** Here, a possible sample space is $$\{0,1\}^\infty$$, the space of infinite sequences with terms in $$\{0,1\}$$, where we may associate $$0$$ with a tails, and $$1$$ with a heads. Again, we may take the event space $$\mathcal F$$ to be the power set, so any set of sequences is a valid event. Suppose that for each toss, a head appears with probability $$p \in [0,1]$$. For integer $$n \geq 1$$, let $$A_n$$ be the event that the first head is tossed on the $$n$$th toss: then
+**Example 6 (independently tossing a sequence of coins).** Here, a possible sample space is $$\{0,1\}^\infty$$, the space of infinite sequences with terms in $$\{0,1\}$$, where we may associate $$0$$ with a tails, and $$1$$ with a heads. In this case, an appropriate [event space](https://math.stackexchange.com/questions/1457569/question-about-the-sigma-algebra-for-infinite-coin-toss) $$\mathcal F$$ is more complicated. For a finite binary string $$b = b_1\dotsb b_n$$, define
 
-$$A_n = \{(\underbrace{0,0,...,0,1}_{n\ \text{tosses}},x_{n+1},x_{n+2},...) : x_{n+1},x_{n+2}... \in \{0,1\}\}$$.
+$$A_b = \{(b_1,b_2,...,b_n,x_{n+1},x_{n+2},...) : x_{n+1},x_{n+2}... \in \{0,1\}\}.$$
 
-**Challenge question 2 (related to example 6).** If a random variable $$X$$ is defined on $$\mathbb{Z}^+$$ such that the event $$\{X = n\} = A_n$$ (i.e. $$\mathbb P(X = n) = \mathbb P(A_n)$$), what is the well-known distribution of $$X$$? Thus, what should $$\mathbb P$$ assign to this event $$A_n$$? What is the probability of any individual sequence $$(x_1,x_2,...)$$ of tosses? Is this a contradiction? (*Hint:* for the last part, consider countable additivity of $$\mathbb P$$. In particular, what is $$\lvert A_n \rvert$$? Can you show that it is *uncountable*? Consider Cantor's diagonalisation argument.) Post your solutions in the [Maths @ Monash Discord](https://discord.gg/hx63ZwSXBg)!
+Then for natural $$n \geq 0$$, define $$\mathcal F_n := \{\varnothing,\Omega\} \cup \{A_b : b\ \text{is a binary string of length at most}\ n\}$$. For example, $$\mathcal F_2 := \{\varnothing,\Omega,A_0,A_1,A_{00},A_{01},A_{10},A_{11}\}$$. Define $$\mathcal F$$ as the smallest sigma algebra containing $$\bigcup_{n = 0}^\infty \mathcal F_n$$ (the union turns out to not be a sigma algebra, as seen [here](https://math.stackexchange.com/questions/1457569/question-about-the-sigma-algebra-for-infinite-coin-toss)).
+
+Now suppose that for each toss, a head appears with probability $$p \in [0,1]$$. For integer $$n \geq 1$$, let $$B_n$$ be the event that the first head is tossed on the $$n$$th toss: then
+
+$$B_n = \{(\underbrace{0,0,...,0,1}_{n\ \text{tosses}},x_{n+1},x_{n+2},...) : x_{n+1},x_{n+2}... \in \{0,1\}\}.$$
+
+**Challenge question 2 (related to example 6).** If a random variable $$X$$ is defined on $$\mathbb{Z}^+$$ such that the event $$\{X = n\} = B_n$$ (i.e. $$\mathbb P(X = n) = \mathbb P(B_n)$$), what is the well-known distribution of $$X$$? Thus, what should $$\mathbb P$$ assign to this event $$B_n$$? What is the probability of any individual sequence $$(x_1,x_2,...)$$ of tosses? Is this a contradiction? (*Hint:* for the last part, consider countable additivity of $$\mathbb P$$. In particular, what is $$\lvert B_n \rvert$$? Can you show that it is *uncountable*? Consider Cantor's diagonalisation argument.) Post your solutions in the [Maths @ Monash Discord](https://discord.gg/hx63ZwSXBg)!
 
 To be continued...
 
