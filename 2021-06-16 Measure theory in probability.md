@@ -94,11 +94,11 @@ $$1 = \mathbb P(\Omega) = \mathbb P(A \cup A^c) = \mathbb P(A) + \mathbb P(A^c),
 
 so $$\mathbb P(A^c) = 1 - \mathbb P(A)$$, as claimed. $$\square$$
 
-**Challenge question 7.** Prove that for *any* $$A,B \in \mathcal F$$ (not necessarily disjoint), we have $$\mathbb P(A \cup B) = \mathbb P(A) + \mathbb P(B) - \mathbb P(A \cap B)$$. (*Hint:* decompose $$A \cup B$$ into two disjoint events in $$\mathcal F$$.)
+**Challenge question 2.** Prove that for *any* $$A,B \in \mathcal F$$ (not necessarily disjoint), we have $$\mathbb P(A \cup B) = \mathbb P(A) + \mathbb P(B) - \mathbb P(A \cap B)$$. (*Hint:* decompose $$A \cup B$$ into two disjoint events in $$\mathcal F$$.)
 
 Note that the probability measure $$\mathbb P$$ is extremely abstract: once we have decided on a *sample space*, that is, a set of possible outcomes, *any* function $$\mathbb{P} : \mathcal F \to [0,1]$$ satisfying the above properties of a measure, defines a "probability" on $$\Omega$$. This probability may range from something usual, to something wild. We consider a few simple examples:
 
-**Example 8 (rolling two independent fair dice).** Here, a possible sample space is $$\Omega = \{1,...,6\} \times \{1,...,6\}$$, i.e. ordered pairs of numbers in $$1,...,6$$. This naturally encodes the outcome of a sequence of two dice rolls. Now what are the valid events? Since the sample space has $$36$$ elements (and is finite), we may take $$\mathcal F = \mathcal P(\Omega)$$, the power set of the sample space; that is, every subset of $$\Omega$$ is a valid event. (You can check that this is indeed a sigma algebra on $$\Omega$$. How many events are there in total?)
+**Example 7 (rolling two independent fair dice).** Here, a possible sample space is $$\Omega = \{1,...,6\} \times \{1,...,6\}$$, i.e. ordered pairs of numbers in $$1,...,6$$. This naturally encodes the outcome of a sequence of two dice rolls. Now what are the valid events? Since the sample space has $$36$$ elements (and is finite), we may take $$\mathcal F = \mathcal P(\Omega)$$, the power set of the sample space; that is, every subset of $$\Omega$$ is a valid event. (You can check that this is indeed a sigma algebra on $$\Omega$$. How many events are there in total?)
 
 Now we consider the probability measure $$\mathbb P : \mathcal F \to [0,1]$$. Note that every event $$A$$ is a (countable) union of individual outcomes $$\omega \in \Omega$$. By our assumption of fairness and independence (which gives symmetry), each of the 36 possible outcomes is assigned a measure of $$\frac{1}{36}$$, so that $$\mathbb P(\Omega) = 1$$. Thus, for $$A \in \mathcal F$$, its probability depends only on its cardinality: in fact,
 
@@ -106,7 +106,7 @@ $$\mathbb P(A) = \mathbb P\left(\bigcup_{\omega \in A} \{\omega\}\right) = \sum_
 
 this fully specifies the probability space in this experiment. (Note that in this derivation, we assumed that $$\mathbb P$$ was a probability measure, to get countable additivity.)
 
-**Example 9 (independently tossing a sequence of coins).** Here, a possible sample space is $$\{0,1\}^\infty$$, the space of infinite sequences with terms in $$\{0,1\}$$, where we may associate $$0$$ with a tails, and $$1$$ with a heads. In this case, an appropriate [event space](https://math.stackexchange.com/questions/1457569/question-about-the-sigma-algebra-for-infinite-coin-toss) $$\mathcal F$$ is more complicated. For a finite binary string $$b = b_1\dotsb b_n$$, define
+**Example 8 (independently tossing a sequence of coins).** Here, a possible sample space is $$\{0,1\}^\infty$$, the space of infinite sequences with terms in $$\{0,1\}$$, where we may associate $$0$$ with a tails, and $$1$$ with a heads. In this case, an appropriate [event space](https://math.stackexchange.com/questions/1457569/question-about-the-sigma-algebra-for-infinite-coin-toss) $$\mathcal F$$ is more complicated. For a finite binary string $$b = b_1\dotsb b_n$$, define
 
 $$A_b = \{(b_1,b_2,...,b_n,x_{n+1},x_{n+2},...) : x_{n+1},x_{n+2}... \in \{0,1\}\}.$$
 
@@ -116,11 +116,11 @@ Now suppose that for each toss, a head appears with probability $$p \in [0,1]$$.
 
 $$B_n = \{(\underbrace{0,0,...,0,1}_{n\ \text{tosses}},x_{n+1},x_{n+2},...) : x_{n+1},x_{n+2}... \in \{0,1\}\}.$$
 
-**Challenge question 3 (related to example 9).** If a random variable $$X$$ is defined on $$\mathbb{Z}^+$$ such that the event $$\{X = n\} = B_n$$ (i.e. $$\mathbb P(X = n) = \mathbb P(B_n)$$), what is the well-known distribution of $$X$$? Thus, what should $$\mathbb P$$ assign to this event $$B_n$$? What is the probability of any individual sequence $$\omega = (x_1,x_2,...)$$ of tosses in $$B_n$$? Is $$\mathbb P(B_n) = \mathbb P\left(\bigcup_{\omega \in B_n} \{\omega\}\right) = \sum_{\omega \in B_n} \mathbb P(\{\omega\})$$? Is this a contradiction? (*Hint:* for the last part, consider *countable* additivity of $$\mathbb P$$. In particular, what is $$\lvert B_n \rvert$$? Can you show that it is *uncountable*? Consider Cantor's diagonalisation argument.) Post your solutions in the [Maths @ Monash Discord](https://discord.gg/hx63ZwSXBg)!
+**Challenge question 3 (related to example 8).** If a random variable $$X$$ is defined on $$\mathbb{Z}^+$$ such that the event $$\{X = n\} = B_n$$ (i.e. $$\mathbb P(X = n) = \mathbb P(B_n)$$), what is the well-known distribution of $$X$$? Thus, what should $$\mathbb P$$ assign to this event $$B_n$$? What is the probability of any individual sequence $$\omega = (x_1,x_2,...)$$ of tosses in $$B_n$$? Is $$\mathbb P(B_n) = \mathbb P\left(\bigcup_{\omega \in B_n} \{\omega\}\right) = \sum_{\omega \in B_n} \mathbb P(\{\omega\})$$? Is this a contradiction? (*Hint:* for the last part, consider *countable* additivity of $$\mathbb P$$. In particular, what is $$\lvert B_n \rvert$$? Can you show that it is *uncountable*? Consider Cantor's diagonalisation argument.) Post your solutions in the [Maths @ Monash Discord](https://discord.gg/hx63ZwSXBg)!
 
 In this previous example, we saw an example of an event with probability 0, but is certainly possible: of course, the event of any particular sequence of heads/tails is a possible outcome.
 
-**Example 10 (uniform distribution on unit interval).**
+**Example 9 (uniform distribution on unit interval).**
 
 To be continued...
 
