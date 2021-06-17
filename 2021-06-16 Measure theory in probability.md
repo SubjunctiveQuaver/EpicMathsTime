@@ -90,7 +90,7 @@ this fully specifies the probability space in this experiment. (Note that in thi
 
 $$A_b = \{(b_1,b_2,...,b_n,x_{n+1},x_{n+2},...) : x_{n+1},x_{n+2}... \in \{0,1\}\}.$$
 
-Then for natural $$n \geq 0$$, define $$\mathcal F_n := \{\varnothing,\Omega\} \cup \{A_b : b\ \text{is a binary string of length at most}\ n\}$$. For example, $$\mathcal F_2 := \{\varnothing,\Omega,A_0,A_1,A_{00},A_{01},A_{10},A_{11}\}$$. Define $$\mathcal F$$ as the smallest sigma algebra containing $$\bigcup_{n = 0}^\infty \mathcal F_n$$ (the union turns out to not be a sigma algebra, as seen [here](https://math.stackexchange.com/questions/1457569/question-about-the-sigma-algebra-for-infinite-coin-toss)).
+Then for natural $$n \geq 0$$, define $$\mathcal F_n := \{\varnothing,\Omega\} \cup \{A_b : b\ \text{is a binary string of length at most}\ n\}$$. For example, $$\mathcal F_2 := \{\varnothing,\Omega,A_0,A_1,A_{00},A_{01},A_{10},A_{11}\}$$. Define $$\mathcal F$$ as the smallest sigma algebra containing $$\bigcup_{n = 0}^\infty \mathcal F_n$$ (the union turns out to not be a sigma algebra, as seen [here](https://math.stackexchange.com/questions/1457569/question-about-the-sigma-algebra-for-infinite-coin-toss)). We need this construction, instead of the entire power set of $$\Omega$$, as there turn out to be subsets of $$\Omega$$ that [cannot be assigned a measure](https://math.stackexchange.com/a/1457657/) in a way that agrees with our definition!
 
 Now suppose that for each toss, a head appears with probability $$p \in [0,1]$$. For integer $$n \geq 1$$, let $$B_n$$ be the event that the first head is tossed on the $$n$$th toss: then
 
