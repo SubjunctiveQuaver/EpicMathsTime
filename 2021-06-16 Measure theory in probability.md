@@ -98,6 +98,16 @@ $$B_n = \{(\underbrace{0,0,...,0,1}_{n\ \text{tosses}},x_{n+1},x_{n+2},...) : x_
 
 **Challenge question 2 (related to example 6).** If a random variable $$X$$ is defined on $$\mathbb{Z}^+$$ such that the event $$\{X = n\} = B_n$$ (i.e. $$\mathbb P(X = n) = \mathbb P(B_n)$$), what is the well-known distribution of $$X$$? Thus, what should $$\mathbb P$$ assign to this event $$B_n$$? What is the probability of any individual sequence $$\omega = (x_1,x_2,...)$$ of tosses in $$B_n$$? Is $$\mathbb P(B_n) = \mathbb P\left(\bigcup_{\omega \in B_n} \{\omega\}\right) = \sum_{\omega \in B_n} \mathbb P(\{\omega\})$$? Is this a contradiction? (*Hint:* for the last part, consider *countable* additivity of $$\mathbb P$$. In particular, what is $$\lvert B_n \rvert$$? Can you show that it is *uncountable*? Consider Cantor's diagonalisation argument.) Post your solutions in the [Maths @ Monash Discord](https://discord.gg/hx63ZwSXBg)!
 
+In this previous example, we saw an example of an event with probability 0, but is certainly possible: of course, the event of any particular sequence of heads/tails is a possible outcome.
+
+**Example 7 (uniform distribution on unit interval).**
+
+Let's now try our hand at proving some simple results we know from probability, using our new axioms! Let $$(\Omega,\mathcal F,\mathbb P)$$ be *any* probability space.
+
+**Proposition 8.** For $$A \in \mathcal F$$, we have $$\mathbb P(A^c) = 1 - \mathbb P(A)$$.
+
+**Challenge question 3.** Prove that for *any* $$A,B \in \mathcal F$$ (not necessarily disjoint), we have $$\mathbb P(A \cup B) = \mathbb P(A) + \mathbb P(B) - \mathbb P(A \cap B)$$.
+
 To be continued...
 
 ### What is a random variable?
