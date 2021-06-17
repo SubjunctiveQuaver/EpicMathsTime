@@ -84,11 +84,15 @@ Let's firstly try our hand at proving some simple results we know from probabili
 
 $$\mathbb P(A \cup B) = \mathbb P(A \cup B \cup \varnothing \cup \dotsb) = \mathbb P(A) + \mathbb P(B) + \mathbb P(\varnothing) + \dotsb = \mathbb P(A) + \mathbb P(B),$$
 
-where we use the fact that $$\mathbb P(\varnothing) = 0$$, i.e. property 1 of measures. $$\qed$$
+where we use the fact that $$\mathbb P(\varnothing) = 0$$, i.e. property 1 of measures. $$\square$$
 
 **Proposition 6.** For $$A \in \mathcal F$$, we have $$\mathbb P(A^c) = 1 - \mathbb P(A)$$.
 
-*Proof.* Observe that $$A,A^c$$ are disjoint.
+*Proof.* Observe that $$A,A^c$$ are disjoint, and $$A \cup A^c = \Omega$$. Then by Proposition 5,
+
+$$1 = \mathbb P(\Omega) = \mathbb P(A \cup A^c) = \mathbb P(A) + \mathbb P(A^c),$$
+
+so $$\mathbb P(A^c) = 1 - \mathbb P(A)$$, as claimed. $$\square$$
 
 **Challenge question 7.** Prove that for *any* $$A,B \in \mathcal F$$ (not necessarily disjoint), we have $$\mathbb P(A \cup B) = \mathbb P(A) + \mathbb P(B) - \mathbb P(A \cap B)$$.
 
